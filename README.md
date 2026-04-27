@@ -66,27 +66,6 @@ Arduino (Robot 1) ↔ Serial Communication ↔ Arduino (Robot 2)
 
 ---
 
-## 📁 Project Structure
-
-robotics-project-ie410/
-│
-├── arduino/
-│   ├── task1_pick_place.ino
-│   ├── task3_master.ino
-│   └── task3_slave.ino
-│
-├── python/
-│   └── task2_camera_pick_place.py
-│
-├── docs/
-│   └── report.pdf
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
-
----
-
 ## ▶️ How to Run
 
 ### 🔹 Task 1 — Pre-programmed Pick & Place
