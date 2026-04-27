@@ -1,48 +1,155 @@
 # 🤖 Robotics Project — IE410 (Winter 2026)
 
 ## 👥 Team Members
-- 202401243 Meet Virugama  
-- 202401102 Mohammadjunaid S. Kureshi  
-- 202401204 Shlok Ukani  
-- 202401198 Ramit Sherashiya  
-- 202401080 Darshil Kanani  
+
+* 202401243 Meet Virugama
+* 202401102 Mohammadjunaid S. Kureshi
+* 202401204 Shlok Ukani
+* 202401198 Ramit Sherashiya
+* 202401080 Darshil Kanani
 
 ---
 
 ## 📌 Project Overview
-This project demonstrates:
-- Pre-programmed pick-and-place
-- Camera-assisted manipulation
-- Dual-arm object handover
+
+This project demonstrates object manipulation using a robotic arm through three progressively complex tasks:
+
+1. **Pre-programmed Pick-and-Place** (Open-loop control)
+2. **Camera-assisted Pick-and-Place** (Perception-driven control)
+3. **Dual-arm Object Handover** (Multi-robot coordination)
+
+The system integrates concepts from kinematics, motion planning, computer vision, and robotic coordination.
 
 ---
 
-## ⚙️ Hardware
-- Arduino Braccio Robot Arm  
-- Webcam / Smartphone Camera  
+## ⚙️ System Architecture
+
+### 🔹 Task 1
+
+Arduino directly controls the robotic arm using predefined joint angles.
+
+### 🔹 Task 2
+
+Camera → Python (OpenCV) → Serial Communication → Arduino → Robot
+
+### 🔹 Task 3
+
+Arduino (Robot 1) ↔ Serial Communication ↔ Arduino (Robot 2)
 
 ---
 
-## ▶️ Run Instructions
+## 🧠 Key Concepts Implemented
 
-### Task 1
-Upload:
+* Forward & Inverse Kinematics (conceptual understanding)
+* Step-based trajectory planning
+* Gripper-based object grasping
+* Image processing using OpenCV
+* Serial communication between systems
+* Multi-robot synchronization using handshake protocol
+
+---
+
+## 🧰 Hardware Used
+
+* Arduino Braccio Robot Arm
+* Two-finger gripper
+* Webcam / Smartphone Camera
+
+---
+
+## 💻 Software Stack
+
+* Python 3
+* OpenCV
+* Arduino IDE
+* PySerial
+
+---
+
+## 📁 Project Structure
+
+robotics-project-ie410/
+│
+├── arduino/
+│   ├── task1_pick_place.ino
+│   ├── task3_master.ino
+│   └── task3_slave.ino
+│
+├── python/
+│   └── task2_camera_pick_place.py
+│
+├── docs/
+│   └── report.pdf
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
+
+---
+
+## ▶️ How to Run
+
+### 🔹 Task 1 — Pre-programmed Pick & Place
+
+Upload the following file using Arduino IDE:
 arduino/task1_pick_place.ino
 
-### Task 2
-pip install -r requirements.txt  
+---
+
+### 🔹 Task 2 — Camera-Assisted Pick & Place
+
+Install dependencies:
+pip install -r requirements.txt
+
+Run:
 python python/task2_camera_pick_place.py
 
-### Task 3
-Upload:
-arduino/task3_master.ino  
-arduino/task3_slave.ino  
+⚠️ Update the correct serial port in the Python file before running.
+
+---
+
+### 🔹 Task 3 — Dual Robot Handover
+
+Upload to respective robots:
+arduino/task3_master.ino
+arduino/task3_slave.ino
 
 ---
 
 ## 🎥 Demo Video
-(Add your video link)
+
+(Add your Google Drive / YouTube link here)
+
+---
 
 ## 📄 Report
-(Add report in docs/)
 
+Available in:
+docs/report.pdf
+
+---
+
+## ⚠️ Assumptions & Limitations
+
+* Fixed lighting conditions for vision-based detection
+* Approximate pixel-to-robot mapping (manual calibration)
+* Open-loop control (no sensor feedback)
+* Limited precision due to servo-based system
+
+---
+
+## 🚀 Future Improvements
+
+* Full inverse kinematics implementation
+* Camera calibration using homography
+* Smooth trajectory planning (cubic interpolation)
+* ROS-based system integration
+* Feedback-based control using sensors
+
+---
+
+## 🏁 Conclusion
+
+This project demonstrates a complete pipeline from basic robotic control to perception-based manipulation and multi-robot coordination. It provides practical exposure to real-world robotics challenges involving motion planning, sensing, and system integration.
+
+---
