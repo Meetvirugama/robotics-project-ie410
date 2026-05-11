@@ -97,7 +97,7 @@ arduino/task3_slave.ino
 
 ## 🎥 Demo Video
 
-(Add your Google Drive / YouTube link here)
+https://drive.google.com/file/d/1GrtE0H8TUWDI1zfG5Pl3ai5-VM1ELaU1/view?usp=sharing
 
 ---
 
